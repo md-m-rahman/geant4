@@ -1,0 +1,22 @@
+/control/verbose 0
+/process/em/verbose 0
+/process/had/verbose 0
+
+/run/initialize
+
+/vis/open 
+/vis/drawVolume
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/viewer/refresh
+
+/gps/source/add 1
+/gps/particle gamma
+/gps/energy 1 MeV
+/gps/position 0 0 -10 cm
+/gps/ang/type iso
+
+/vis/scene/add/trajectories 
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/set/viewpointVector 1 1 1
+/run/beamOn 100
+/vis/viewer/refresh
