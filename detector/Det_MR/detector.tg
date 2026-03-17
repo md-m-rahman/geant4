@@ -1,0 +1,20 @@
+:volu world BOX 5*m 5*m 5*m G4_Galactic
+:vis world OFF
+
+:volu room BOX 300*cm 300*cm 300*cm G4_AIR
+:vis room OFF
+:rotm r000 0 0 0
+:mixt_by_natoms G4_SUCROSE 1.05 3
+    C 12
+    H 360
+    O 180
+:volu drop SPHERE 0 2*cm 0 180 0 90 G4_SUCROSE
+:volu HPGe TUBE 0 2*cm  3*cm G4_Ge
+
+:place room 1 world r000 0 0 0
+:place drop 1 room r000 0 2*cm 0
+:place HPGe 1 room r000 0 0 10*cm
+:color room 0.77 0.51 0.27
+:color drop 0.77 0.51 0.27
+:color HPGe 0.77 0.51 0.27
+
