@@ -1,14 +1,15 @@
-/control/verbose 1
+/control/verbose 0
 /process/em/verbose 1
 /process/had/verbose 0
 /geometry/source detector.tg
+
 /run/initialize
 /process/list
+#/process/inactivate eIoni e-
 
-/process/inactivate eIoni e-
-
-/gps/particle e-
-/gps/energy 1 MeV
+/gps/source/add 1
+/gps/particle gamma
+/gps/energy 8 MeV
 /gps/ang/type iso
 /gps/ang/minphi 180 deg
 /gps/ang/maxphi 270 deg
@@ -31,7 +32,7 @@
 
 /vis/disable
 /tracking/verbose 0
-/analysis/setFileName 1MeV_e-.root
+/analysis/setFileName 8MeV_gamma.root
 /run/verbose 2
 /run/printProgress 100
-/run/beamOn 500
+/run/beamOn 500 
