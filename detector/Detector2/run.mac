@@ -10,14 +10,14 @@
 #/process/inactivate msc e-
 
 # Turn off 'eIoni' (Ionization) to stop energy deposition from e-
-/process/inactivate eIoni e-
+#/process/inactivate eIoni e-
 
 /vis/open 
 /vis/drawVolume
 /vis/scene/add/axes 0 0 0 10 cm
 /vis/viewer/refresh
 
-/gps/particle e-
+/gps/particle gamma
 /gps/energy 1 MeV
 /gps/position 0 0 -10 cm
 /gps/direction 0 0 1

@@ -11,13 +11,13 @@
 
 # change particle and its energy here
 /gps/particle gamma
-/gps/energy 2.6 MeV
+/gps/energy 662 keV
 # isotropically emit gamma rays in a range
 /gps/ang/type iso
-/gps/ang/minphi 180 deg
-/gps/ang/maxphi 270 deg
-/gps/ang/mintheta 40 deg
-/gps/ang/maxtheta 150 deg
+/gps/ang/minphi 0 deg
+/gps/ang/maxphi 360 deg
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
 
 # visualize geometry and events for debugging
 /vis/open VRML2FILE
@@ -40,7 +40,7 @@
 /vis/disable
 /tracking/verbose 0
 # turn on data recording
-/analysis/setFileName gears.root
+/analysis/setFileName 662keV_gamma.root
 # turn on progress report
 /run/verbose 2
 /run/printProgress 10000
