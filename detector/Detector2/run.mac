@@ -3,7 +3,7 @@
 /process/had/verbose 0
 
 /run/initialize
-
+/geometry/test/run
 /process/list
 
 # Turn off 'msc' (Multiple Scattering) for electrons to see "sharp" tracks
@@ -17,9 +17,9 @@
 /vis/scene/add/axes 0 0 0 10 cm
 /vis/viewer/refresh
 
-/gps/particle gamma
-/gps/energy 1 MeV
-/gps/position 0 0 -10 cm
+/gps/particle alpha
+/gps/energy 5 MeV
+/gps/position 0 0 3 cm
 /gps/direction 0 0 1
 
 /vis/scene/add/trajectories

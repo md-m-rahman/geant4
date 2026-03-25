@@ -10,12 +10,12 @@
   H 360 
   O 180
 
-:volu drop SPHERE 0 2*cm 0 180 0 90 G4_SUCROSE
+:volu drop SPHERE 0 0.5*cm 0 180 0 90 G4_SUCROSE
 :color drop 0.9 0.2 0.2
 
-:volu HPGe TUBE 0 2*cm 3*cm G4_Ge
+:volu HPGe TUBE 0 0.5 0.8*cm G4_Ge
 :color HPGe 0.5 0.5 0.5
 
 :place room 1 world r000 0 0 0
-:place drop 1 room r000 0 1*cm 0
-:place HPGe 1 room r000 0 0 10*cm
+:place drop 1 room r000 0 0 0 
+:place HPGe 1 room r000 0 0 5*cm

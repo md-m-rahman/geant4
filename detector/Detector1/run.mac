@@ -3,21 +3,22 @@
 /process/had/verbose 0
 
 /run/initialize
+/geometry/test/run
 
 /vis/open 
 /vis/drawVolume
 /vis/scene/add/axes 0 0 0 10 cm
 /vis/viewer/set/viewpointVector 1 1 1
-/vis/viewer/refresh
+/vis/viewer/flush
 
 /gps/source/add 1
-/gps/particle gamma
-/gps/energy 5 MeV
-/gps/position 10 0 0 cm
-/gps/direction -1 0 0
+/gps/particle proton
+/gps/energy 60 MeV
+/gps/position 0 0 5 cm
+/gps/direction 0 0 -1
 
 /vis/scene/add/trajectories 
 /vis/scene/endOfEventAction accumulate
-#/vis/viewer/set/viewpointVector 1 1 1
-/run/beamOn 100
+/vis/viewer/set/viewpointVector 1 1 1
+/run/beamOn 50
 /vis/viewer/refresh

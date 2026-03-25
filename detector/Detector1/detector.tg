@@ -1,21 +1,30 @@
 :volu world BOX 500*cm 500*cm 500*cm G4_Galactic
 :vis world OFF
 :rotm r000 0 0 0
-:rotm r090y 90 0 0 0 90 90
-:volu cryostat TUBE 5 5.5*cm 25*cm G4_Al
-:volu stage BOX 2*cm .5*cm 2*cm G4_Au
-:volu Cu_plate BOX 2*cm 0.25*cm 2*cm G4_Cu
-:volu In_foil BOX 2*cm 0.05*cm 2*cm G4_In
-:volu HPGe TUBE 0 1*cm 2*cm G4_Ge
 
-:place cryostat 1 world r090y 0 0 0
-:place stage 2 cryostat r000 0 -3.0625 0
-:place Cu_plate 3 cryostat r000 0 -1.0625 0
-:place In_foil 4 cryostat r000 0 -1.05 0
-:place HPGe 5 cryostat r000 0 0 0
+:volu cryostat TUBE 0 5.5*cm 10*cm G4_Galactic
+:vis cryostat OFF
+:volu stage BOX 1*cm 1*cm 0.5*cm G4_Au
+:volu Phantom BOX 1.5*cm 1.5*cm 1.5*cm G4_TISSUE_SOFT_ICRP
+:mixt_by_natoms G4_TISSUE_SOFT_ICRU-4 1.05 7
+  H 105
+  C  83
+  N  23
+  O 779
+ Na   2
+ Cl   3
+  K   2
+:volu tumor SPHERE 0 0.5*cm 0 360 0 180 G4_TISSUE_SOFT_ICRU-4
+:volu HPGe BOX 1*cm 1*cm 1*cm G4_Ge
+
+:place cryostat 1 world r000 0 0 0
+:place HPGe  2 cryostat r000 0 0 0
+:place tumor 3 cryostat r000 0 0  1.50005*cm 
+:place Phantom 4 cryostat r000 0 0 4.5001*cm 
+:place stage 5 cryostat r000 0 0 -1.5005*cm 
+
 :color cryostat 0.5 0.5 0.5
-:color stage 0 0 1
-:color Cu_plate 1 0 0
-:color In_foil 0 1 0
-:color HPGe 0.5 0.5 0.5
-
+:color HPGe 1 0 0
+:color tumor 0 1 0
+:color Phantom 0 0 1
+:color stage 0.5 0.5 0.5
