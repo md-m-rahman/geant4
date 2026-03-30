@@ -15,7 +15,7 @@
 /gps/particle proton
 /gps/energy 60 MeV
 /gps/position 0 0 5 cm
-/gps/direction 0 0 -1
+/gps/direction 0 -1 0
 
 /vis/scene/add/trajectories 
 /vis/scene/endOfEventAction accumulate
