@@ -1,0 +1,13 @@
+/control/verbose 0
+/process/em/verbose 1
+/process/had/verbose 0
+
+/run/initialize
+/geometry/test/run
+
+/vis/open 
+/vis/drawVolume
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/flush
+

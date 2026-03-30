@@ -6,6 +6,12 @@
 /geometry/test/run
 /process/list
 
+/gps/particle mu+
+/gps/energy 4 GeV
+#/gps/ang/type iso
+/gps/position 0 0 100 cm
+/gps/direction 0 0 -1
+
 # Turn off 'msc' (Multiple Scattering) for electrons to see "sharp" tracks
 #/process/inactivate msc e-
 
@@ -15,12 +21,8 @@
 /vis/open 
 /vis/drawVolume
 /vis/scene/add/axes 0 0 0 10 cm
+/vis/viewer/set/viewpointVector 1 1 1
 /vis/viewer/refresh
-
-/gps/particle alpha
-/gps/energy 5 MeV
-/gps/position 0 0 3 cm
-/gps/direction 0 0 1
 
 /vis/scene/add/trajectories
 /vis/scene/endOfEventAction accumulate
