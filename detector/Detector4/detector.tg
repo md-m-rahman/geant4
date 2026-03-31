@@ -1,0 +1,22 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+:volu room BOX 300*cm 300*cm 300*cm G4_AIR
+:vis room OFF
+:rotm r000 0 0 0
+
+:mixt_by_natoms G4_TISSUE_SOFT_ICRU_4 1.05 7
+  H 105
+  C  83
+  N  23
+  O 779
+ Na   2
+ Cl   3
+  K   2
+:volu tumor SPHERE 0 0.5*cm 0 360 0 180 G4_TISSUE_SOFT_ICRU_4
+:volu Phantom BOX 1.5*cm 1.5*cm 1.5*cm G4_TISSUE_SOFT_ICRP
+:union Body Phantom tumor r000 0 -0.5*cm 0 G4_TISSUE_SOFT_ICRP
+:color Body 1 0 1
+
+:place room 1 world r000 0 0 0
+:place Body 5 room r000 0 0 0 
+:color Body 1 0 1
