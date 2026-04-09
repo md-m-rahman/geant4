@@ -1,0 +1,32 @@
+/control/verbose 1
+/process/em/verbose 1
+/process/had/verbose 1
+/geometry/source detector.tg
+/run/initialize
+
+/gps/particle neutron
+/gps/energy 10 MeV
+/gps/position 0 25 0 cm
+/gps/direction 0 -1 0
+
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 10
+/run/beamOn 10
+/vis/viewer/flush
+
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/axes
+/vis/scene/add/trajectories
+
+/tracking/verbose 2
+/run/beamOn 10
+
+/vis/disable
+/tracking/verbose 0
+/analysis/setFileName 10MeVneutron.root
+/run/verbose 2
+/run/printProgress 10000
+/run/beamOn 50000

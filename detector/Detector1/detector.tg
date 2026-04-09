@@ -18,7 +18,6 @@
  Cl   3
   K   2
 :volu tumor SPHERE 0 0.5*cm 0 360 0 180 G4_TISSUE_SOFT_ICRU-4
-:vis tumor ON
 :volu HPGe BOX 0.5*cm 0.5*cm 0.5*cm G4_Ge
 
 :place room 1 world r000 0 0 0
