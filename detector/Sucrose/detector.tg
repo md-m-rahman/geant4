@@ -5,7 +5,9 @@
 :rotm r000 0 0 0
 :rotm r90x 90 0 0 0 90 90
 :volu cryostat TUBE 3.5*cm 3.75*cm 5*cm G4_Galactic
+:vis cryostat OFF
 :volu cryo_vacuum TUBE 0 3.4*cm 4.9*cm G4_Galactic
+:vis cryo_vacuum OFF
 :volu HPGe TUBE 0 .75*cm .4*cm G4_Ge
 :volu In_foil BOX 2*cm 0.05*cm 2*cm G4_In
 :volu Cu_plate BOX 2*cm 0.25*cm 2*cm G4_Cu

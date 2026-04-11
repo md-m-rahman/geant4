@@ -5,16 +5,17 @@
 /run/initialize
 /geometry/test/run
 
-/vis/open VRML2FILE
+/vis/open
 /vis/drawVolume
 /vis/scene/add/axes 0 0 0 10 cm
 /vis/viewer/set/style surface
 /vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/set/background white
 /vis/viewer/flush
 
 /gps/source/add 1
 /gps/particle gamma
-/gps/energy 5 MeV
+/gps/energy 662 keV
 /gps/position 0 10 0 cm
 /gps/direction 0 -1 0
 
