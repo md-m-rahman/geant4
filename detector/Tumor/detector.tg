@@ -1,0 +1,12 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+:volu room BOX 100*cm 100*cm 100*cm G4_AIR
+:vis room OFF
+
+:rotm r000 0 0 0
+:volu tumor(s) SPHERE 0 5*cm  0 360 0 180 G4_Ge
+:vis tumor(s) ON
+:place room 1 world r000 0 0 0
+:place tumor(s) 1 room r000 0 0 0
+:color tumor(s) 1 1 0
+:color room 0 0 1
