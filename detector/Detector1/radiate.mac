@@ -1,0 +1,48 @@
+# print macro commands on screen
+/control/verbose 1
+/process/em/verbose 0
+/process/had/verbose 0
+# geometry must be specified before /run/initialize
+/geometry/source detector.tg
+# specify a physics list
+#/physics_lists/select QGSP_BERT_EMV
+# initialize geometry and physics
+/run/initialize
+
+# change particle and its energy here
+/gps/particle gamma
+/gps/energy 662 keV
+# isotropically emit gamma rays in a range
+/gps/ang/type iso
+/gps/ang/minphi 0 deg
+/gps/ang/maxphi 360 deg
+/gps/ang/mintheta 0 deg
+/gps/ang/maxtheta 180 deg
+
+# visualize geometry and events for debugging
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 10
+/run/beamOn 10
+
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/axes
+/vis/scene/add/trajectories
+
+# turn on detailed information about tracking
+/tracking/verbose 2
+# dump a few events on screen for debugging
+/run/beamOn 10
+
+# turn off screen printing for fast simulation 
+/vis/disable
+/tracking/verbose 0
+# turn on data recording
+/analysis/setFileName 662keV_gamma.root
+# turn on progress report
+/run/verbose 2
+/run/printProgress 10000
+# start simulation
+/run/beamOn 50000

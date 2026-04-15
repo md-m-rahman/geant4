@@ -1,0 +1,30 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+:volu room BOX 300*cm 300*cm 300*cm G4_AIR
+:vis room OFF
+
+:rotm r000 0 0 0
+:rotm r90x 90 0 0
+:volu paraffin_shield BOX 15*cm 15*cm 15*cm G4_PARAFFIN
+:volu cryostat TUBE 3.25*cm 3.5*cm 5*cm G4_Al
+:volu cryo_vacuum TUBE 0 3.24*cm 4.9*cm G4_Galactic
+:volu HPGe TUBE 0 1*cm .4*cm G4_Ge
+:volu Indium_Foil BOX 1.5*cm .05*cm 1.5*cm G4_In
+:volu Stage BOX 1.5*cm .5*cm 1.5*cm G4_Au
+:volu boron_shield BOX 1.5*cm .5*cm 1.5*cm G4_BORON_OXIDE
+
+:place room 1 world r000 0 0 0
+:place paraffin_shield 2 room r000 0 20*cm 0
+:place cryostat 3 room r000 0 0 0
+:place cryo_vacuum 4 room r000 0 0 0
+:place HPGe  5 cryo_vacuum r90x 0 0 0
+:place Indium_Foil 6 cryo_vacuum r000 0 -0.45005*cm 0
+:place Stage 7 cryo_vacuum r000 0 -1.0001*cm 0
+:place boron_shield 8 cryo_vacuum r000 0 .90005*cm 0
+
+:color paraffin_shield .5 .5 .5
+:color cryostat 0.5 0.5 0.5
+:color HPGe 1 0 0
+:color Indium_Foil 0 1 0
+:color Stage 1 0 0
+:color boron_shield 1 1 0

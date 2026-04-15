@@ -1,0 +1,38 @@
+/control/verbose 0
+/process/em/verbose 1
+/process/had/verbose 0
+/geometry/source detector.tg
+
+/run/initialize
+/process/list
+#/process/inactivate eIoni e-
+
+/gps/source/add 1
+/gps/particle gamma
+/gps/energy 8 MeV
+/gps/ang/type iso
+/gps/ang/minphi 180 deg
+/gps/ang/maxphi 270 deg
+/gps/ang/mintheta 40 deg
+/gps/ang/maxtheta 150 deg
+
+/vis/open VRML2FILE
+/vis/drawVolume
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 10
+/run/beamOn 10
+ 
+/vis/open HepRepFile
+/vis/drawVolume
+/vis/scene/add/axes
+/vis/scene/add/trajectories
+
+/tracking/verbose 2
+/run/beamOn 10
+
+/vis/disable
+/tracking/verbose 0
+/analysis/setFileName 8MeV_gamma.root
+/run/verbose 2
+/run/printProgress 100
+/run/beamOn 500 

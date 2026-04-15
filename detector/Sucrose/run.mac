@@ -1,0 +1,31 @@
+/control/verbose 0
+/process/em/verbose 1
+/process/had/verbose 0
+
+/run/initialize
+/geometry/test/run
+/process/list
+
+/gps/particle gamma
+/gps/energy 662 keV
+#/gps/ang/type iso
+/gps/position 0 50 0 cm
+/gps/direction 0 -1 0
+
+# Turn off 'msc' (Multiple Scattering) for electrons to see "sharp" tracks
+#/process/inactivate msc e-
+
+# Turn off 'eIoni' (Ionization) to stop energy deposition from e-
+#/process/inactivate eIoni e-
+
+/vis/open 
+/vis/drawVolume
+/vis/scene/add/axes 0 0 0 10 cm
+/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/refresh
+
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate
+/vis/viewer/set/viewpointVector 1 1 1
+/run/beamOn 500
+/vis/viewer/flush

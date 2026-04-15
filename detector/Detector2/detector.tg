@@ -1,0 +1,12 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+
+:volu room BOX 300*cm 300*cm 300*cm G4_WATER
+:vis room OFF
+:rotm r000 0 0 0
+
+
+:volu HPGe TUBE 0 1*cm 0.85*cm G4_Ge
+:color HPGe 1 0 0
+:place room 1 world r000 0 0 0
+:place HPGe 3 room r000 0 0 0

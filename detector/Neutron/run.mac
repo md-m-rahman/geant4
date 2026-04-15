@@ -1,0 +1,27 @@
+/control/verbose 0
+/process/em/verbose 1
+/process/had/verbose 0
+
+/run/initialize
+/geometry/test/run
+
+/vis/open 
+/vis/drawVolume
+/vis/scene/add/axes 0 0 0 10 cm
+#/vis/viewer/set/viewpointVector 1 1 1
+/vis/viewer/flush
+
+/gps/source/add 1
+/gps/particle neutron
+#/gps/ang/type iso
+/gps/energy 10 MeV
+/gps/position 0 35 0 cm
+/gps/direction 0 -1 0
+
+/vis/scene/add/trajectories 
+/vis/scene/endOfEventAction accumulate
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set neutron yellow
+#/vis/viewer/set/viewpointVector 1 1 1
+/run/beamOn 50
+/vis/viewer/refresh

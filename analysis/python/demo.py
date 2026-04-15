@@ -37,6 +37,7 @@ if any('vscode' in mod for mod in sys.modules):
     scriptdir = os.path.dirname(__file__)
     subdir = scriptdir.rpartition("geant4/")[-1]
 print(f"path relative to the project root: {subdir}")
+subdir = "analysis/python"
 filename = subdir + "/spectrum.root"
 with uproot.recreate(filename) as f:
     f.mktree("t", {"e": data})
