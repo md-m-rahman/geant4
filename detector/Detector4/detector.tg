@@ -8,7 +8,7 @@
 :vis cryostat OFF
 :volu cryo_vacuum TUBE 0 4.75*cm 5*cm G4_Galactic
 :vis cryo_vacuum OFF
-:mixt_by_natoms G4_TISSUE_SOFT_ICRP 0.30 9
+:mixt_by_natoms TISSUE_SOFT_ICRP 0.30 9
   H 105
   C  83
   N  23
@@ -18,9 +18,9 @@
   S   2
  Cl   3
   K   2
-:volu Phantom(S) ELLIPTICALTUBE 4*cm 3*cm 2.5*cm G4_TISSUE_SOFT_ICRP
+:volu Phantom(S) ELLIPTICALTUBE 4*cm 3*cm 2.5*cm TISSUE_SOFT_ICRP
 :color Phantom(S) 0.5 0.5 0.5 0.6
-:mixt_by_natoms G4_TISSUE_SOFT_ICRU-4 1.05 12
+:mixt_by_natoms TISSUE_SOFT_ICRU-4 1.05 12
  H 105
   C  83
   N  23
@@ -33,7 +33,7 @@
   Zn  4
   Se  1
   Mg  1
-:volu tumor(S) SPHERE 0 1.5*cm 0 360 0 180 G4_TISSUE_SOFT_ICRU-4
+:volu tumor(S) SPHERE 0 1.5*cm 0 360 0 180 TISSUE_SOFT_ICRU-4
 :color tumor(S) .72 .41 .11 1
 
 :volu HPGe(S) TUBE 0 3*cm 2*cm G4_Ge
