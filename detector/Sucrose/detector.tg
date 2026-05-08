@@ -12,11 +12,11 @@
 :volu In_foil BOX 2*cm 0.05*cm 2*cm G4_In
 :volu Cu_plate BOX 2*cm 0.25*cm 2*cm G4_Cu
 :volu stage BOX 2*cm 0.5*cm 2*cm G4_Au
-:mixt_by_natoms G4_SUCROSE 1.05 3
+:mixt_by_natoms sugar 1.05 3
   C 12
   H 360
   O 180
-:volu drop SPHERE 0 0.5*cm 0 180 0 90 G4_SUCROSE
+:volu drop SPHERE 0 0.5*cm 0 180 0 90 sugar
 
 :place room 1 world r000 0 0 0
 :place cryostat 2 room r000 0 0 0
