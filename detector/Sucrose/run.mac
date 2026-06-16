@@ -1,5 +1,5 @@
 /control/verbose 0
-/process/em/verbose 1
+/process/em/verbose 2
 /process/had/verbose 0
 
 /run/initialize
@@ -9,7 +9,7 @@
 /gps/particle gamma
 /gps/energy 662 keV
 #/gps/ang/type iso
-/gps/position 0 50 0 cm
+/gps/position 0 20 0 cm
 /gps/direction 0 -1 0
 
 # Turn off 'msc' (Multiple Scattering) for electrons to see "sharp" tracks
@@ -20,7 +20,8 @@
 
 /vis/open 
 /vis/drawVolume
-/vis/scene/add/axes 0 0 0 10 cm
+/vis/scene/add/axes 0 0 0 20 cm
+/vis/viewer/set/style surface
 /vis/viewer/set/viewpointVector 1 1 1
 /vis/viewer/refresh
 

@@ -8,27 +8,35 @@
 :vis cryostat OFF
 :volu cryo_vacuum TUBE 0 3.4*cm 4.9*cm G4_Galactic
 :vis cryo_vacuum OFF
-:volu HPGe TUBE 0 .75*cm .4*cm G4_Ge
-:volu In_foil BOX 2*cm 0.05*cm 2*cm G4_In
-:volu Cu_plate BOX 2*cm 0.25*cm 2*cm G4_Cu
-:volu stage BOX 2*cm 0.5*cm 2*cm G4_Au
-:mixt_by_natoms sugar 1.05 3
+:volu HPGe(S) TUBE 0 .75*cm .4*cm G4_Ge
+:color HPGe(S) 1 1 0 1
+:volu In_foil(S) BOX 2*cm 0.05*cm 2*cm G4_In
+:color In_foil(S) 0 0 1 1
+:volu Cu_plate(S) BOX 2*cm 0.25*cm 2*cm G4_Cu
+:color Cu_plate(S) 1 0 0 1
+:volu stage(S) BOX 2*cm 0.5*cm 2*cm G4_Au
+:color stage(S) 0.5 0.5 0.5 1
+:mixt_by_weight CORK 0.25 4
+  C 0.58
+  H 0.10
+  O 0.30
+  N 0.02
+:volu Phantom(S) ELLIPTICALTUBE 4*cm 3*cm 2.5*cm CORK
+:color Phantom(S) 0.5 0.5 0.5 0.6
+:mixt_by_natoms G4_SUCROSE 1.05 3
   C 12
   H 360
   O 180
-:volu drop SPHERE 0 0.5*cm 0 180 0 90 sugar
+:volu tumor(S) SPHERE 0 0.5*cm 0 180 0 90 G4_SUCROSE
+:color tumor(S) 1 0 0 1
 
 :place room 1 world r000 0 0 0
-:place cryostat 2 room r000 0 0 0
-:place cryo_vacuum 3 room r000 0 0 0
-:place HPGe  4 cryo_vacuum  r90x 0 0 0
-:place In_foil 5 cryo_vacuum r000 0 -.4500005*cm 0
-:place Cu_plate 6 cryo_vacuum r000 0 -.750001*cm 0
-:place stage 7 cryo_vacuum r000 0 -1.5000015*cm 0
-:place drop 8 room r000 0 3.7500005*cm 0
+:place tumor(S) 2 Phantom(S) r000 0 0 0
+:place Phantom(S) 3 room r000 0 10*cm 0
 
-:color drop 1.0 0.5 0.31
-:color HPGe 1 1 0
-:color In_foil 0 0 1
-:color Cu_plate 1 0 0
-:color stage 0.5 0.5 0.5
+:place cryostat 4 room r000 0 0 0
+:place cryo_vacuum 5 room r000 0 0 0
+:place HPGe(S)  4 cryo_vacuum  r90x 0 0 0
+:place In_foil(S) 5 cryo_vacuum r000 0 -.4500005*cm 0
+:place Cu_plate(S) 6 cryo_vacuum r000 0 -.750001*cm 0
+:place stage(S) 7 cryo_vacuum r000 0 -1.5000015*cm 0
