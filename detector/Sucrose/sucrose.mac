@@ -13,7 +13,7 @@
 /gps/position 0 20 0 cm
 /gps/direction 0 -1 0
 
-/vis/open VRML2FILE
+/vis/open 
 /vis/drawVolume
 /vis/scene/add/trajectories
 /vis/scene/endOfEventAction accumulate 10

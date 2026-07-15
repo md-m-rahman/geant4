@@ -13,8 +13,8 @@
 /gps/particle proton
 /gps/energy 60 MeV
 # isotropically emit gamma rays in a range
-/gps/position 0 0 6 cm
-/gps/direction 0 0 -1
+/gps/position 0 20 0 cm
+/gps/direction 0 -1 0
 
 # visualize geometry and events for debugging
 /vis/open VRML2FILE
