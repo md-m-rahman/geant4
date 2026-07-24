@@ -1,0 +1,53 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+:volu room BOX 50*cm 50*cm 50*cm G4_Galactic
+:vis room OFF
+:rotm r000 0 0 0
+:rotm r90x 90 0 180 0 90 90
+:rotm r90y 180 0 90 90 90 0
+
+:mixt_by_weight Soft_tissue 0.29 13
+  H 0.101278
+  C  0.102310
+  N  0.028650
+  O  0.757072
+ Na  0.001840
+ Mg  0.000730
+  P  0.000800
+  S  0.002250
+ Cl  0.002660
+  K  0.001940
+ Ca  0.000090
+ Fe  0.000370
+ Zn  0.000010
+
+:volu Phantom(S) ELLIPTICALTUBE 1.5*cm 1*cm 1.5*cm Soft_tissue
+:color Phantom(S) 0.5 0.5 0.5 0.6
+:mixt_by_weight Tumor 1.05 13
+  H 0.101278
+  C  0.102310
+  N  0.028650
+  O  0.757072
+ Na  0.001840
+ Mg  0.000730
+  P  0.000800
+  S  0.002250
+ Cl  0.002660
+  K  0.001940
+ Ca  0.000090
+ Fe  0.000370
+ Zn  0.000010
+
+:volu tumor(S) SPHERE 0 0.5*cm 0 360 0 180 Tumor
+:color tumor(S) .72 .41 .11 1
+:volu HPGe(S) TUBE 0 3*cm 2*cm G4_Ge
+:color HPGe(S) 1 1 0
+
+:place room 1 world r000 0 0 0
+:place Phantom(S) 2 room r000 0 0 0
+:place tumor(S) 3 Phantom(S) r000 0 0 0
+:vis tumor(S) ON
+:vis Phantom(S) ON
+
+:place HPGe(S) 4 room r90x 0 -10*cm 0
+
