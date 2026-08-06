@@ -34,3 +34,6 @@ _site
 *checkpoints*
 .Trash*
 *test*
+# Large generated analysis files
+volume4_gamma_Compton_Q_actual_fixed30.csv
+vlm4_gamma_entry_events.csv

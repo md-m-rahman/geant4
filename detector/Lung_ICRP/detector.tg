@@ -3,8 +3,8 @@
 :volu room BOX 50*cm 50*cm 50*cm G4_Galactic
 :vis room OFF
 :rotm r000 0 0 0
-:rotm r90x 90 0 180 0 90 90
-:rotm r90y 180 0 90 90 90 0
+:rotm r225 90 135 0 0 90 225
+:rotm r315 90 45 180 135 90 315 
 
 :mixt_by_weight Soft_tissue 0.29 13
   H 0.101278
@@ -38,9 +38,9 @@
  Fe  0.000370
  Zn  0.000010
 
-:volu tumor(S) SPHERE 0 0.5*cm 0 360 0 180 Tumor
+:volu tumor(S) SPHERE 0 0.25*cm 0 360 0 180 Tumor
 :color tumor(S) .72 .41 .11 1
-:volu HPGe(S) TUBE 0 3*cm 2*cm G4_Ge
+:volu HPGe(S) TUBE 0  1*cm .5*cm G4_Ge
 :color HPGe(S) 1 1 0
 
 :place room 1 world r000 0 0 0
@@ -49,4 +49,5 @@
 :vis tumor(S) ON
 :vis Phantom(S) ON
 
-:place HPGe(S) 4 room r90x 0 -10*cm 0
+:place HPGe(S) 4 room r225 -1.25*cm -2.165*cm 0
+:place HPGe(S) 5 room r315 1.768*cm -1.768*cm 0
