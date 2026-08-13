@@ -1,0 +1,20 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+:volu room BOX 50*cm 50*cm 50*cm G4_Galactic
+:vis room OFF
+:rotm r000 0 0 0
+:rotm r225 90 135 0 0 90 225
+:rotm r315 90 45 180 135 90 315 
+:volu H(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_H
+:volu C(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_C
+:volu O(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_O
+:volu HPGe(S) TUBE 0  1*cm .5*cm G4_Ge
+:color HPGe(S) 1 1 0
+
+:place room 1 world r000 0 0 0
+:place H(S) 2 room r000 0 2.00*cm 0
+:place C(S) 3 room r000 0 1.00*cm 0
+:place O(S) 6 room r000 0 0 0
+
+:place HPGe(S) 4 room r315 1.768*cm -1.768*cm 0
+:place HPGe(S) 5 room r225 -1.25*cm -2.165*cm 0

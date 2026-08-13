@@ -1,0 +1,3 @@
+volume,number_of_et_records,curve_peak_energy_keV,curve_left_half_keV,curve_right_half_keV,curve_FWHM_keV,curve_resolution_percent,gaussian_centroid_keV,gaussian_sigma_keV,gaussian_FWHM_keV,gaussian_resolution_percent
+15,68,1.0,,3.937985486698207,,,1.0040994594809673,0.06696420903470543,0.15768865871910506,15.704485968015208
+16,294,1.0,,3.9473706898279466,,,1.0247415377579123,0.6404618803837123,1.5081724451651735,147.1758867572584

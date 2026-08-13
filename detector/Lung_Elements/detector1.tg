@@ -1,0 +1,42 @@
+:volu world BOX 500*cm 500*cm 500*cm G4_Galactic
+:vis world OFF
+:volu room BOX 50*cm 50*cm 50*cm G4_Galactic
+:vis room OFF
+:rotm r000 0 0 0
+:rotm r225 90 135 0 0 90 225
+:rotm r315 90 45 180 135 90 315 
+
+:volu H(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_H
+:volu C(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_C
+:volu N(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_N
+:volu O(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_O
+:volu Na(S) BOX 0.5*cm 0.5*cm 0.5*cm G4_Na
+:volu Mg(S) BOX 0.5*cm 0.5*cm 0.5*cm G4_Mg
+:volu P(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_P
+:volu S(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_S
+:volu Cl(S) BOX 0.5*cm 0.5*cm 0.5*cm G4_Cl
+:volu K(S)  BOX 0.5*cm 0.5*cm 0.5*cm G4_K
+:volu Ca(S) BOX 0.5*cm 0.5*cm 0.5*cm G4_Ca
+:volu Fe(S) BOX 0.5*cm 0.5*cm 0.5*cm G4_Fe
+:volu Zn(S) BOX 0.5*cm 0.5*cm 0.5*cm G4_Zn
+
+:volu HPGe(S) TUBE 0  1*cm .5*cm G4_Ge
+:color HPGe(S) 1 1 0
+
+:place room 1 world r000 0 0 0
+:place H(S) 2 room r000 0 13.10*cm 0
+:place C(S) 3 room r000 0 12.05*cm 0
+:place N(S) 4 room r000 0 11.00*cm 0
+:place O(S) 5 room r000 0 9.95*cm 0
+:place Na(S) 6 room r000 0 8.90*cm 0
+:place Mg(S) 7 room r000 0 7.85*cm 0
+:place P(S) 8 room r000 0 6.80*cm 0
+:place S(S) 9 room r000 0 5.75*cm 0
+:place Cl(S) 10 room r000 0 4.70*cm 0
+:place K(S) 11 room r000 0 3.65*cm 0
+:place Ca(S) 12 room r000 0 2.60*cm 0
+:place Fe(S) 13 room r000 0 1.55*cm 0
+:place Zn(S) 14 room r000 0 0 0
+
+:place HPGe(S) 15 room r225 -1.25*cm -2.165*cm 0
+:place HPGe(S) 16 room r315 1.768*cm -1.768*cm 0
