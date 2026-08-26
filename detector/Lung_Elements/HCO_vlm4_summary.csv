@@ -1,0 +1,10 @@
+quantity,value
+number_of_valid_gamma_tracks,882.0
+Et_peak_bin_keV,52.659091
+Gaussian_mean_keV,64.160128
+Gaussian_mean_error_keV,14.60022
+Gaussian_sigma_keV,43.084433
+Gaussian_sigma_error_keV,23.045281
+Gaussian_FWHM_keV,101.456086
+Gaussian_FWHM_error_keV,54.267489
+FWHM_over_mean_percent,158.129496

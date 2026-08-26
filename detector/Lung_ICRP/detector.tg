@@ -3,6 +3,8 @@
 :volu room BOX 50*cm 50*cm 50*cm G4_Galactic
 :vis room OFF
 :rotm r000 0 0 0
+:rotm r90x 90 0 180 0 90 90
+:rotm r90y 180 0 90 90 90 0
 :rotm r225 90 135 0 0 90 225
 :rotm r315 90 45 180 135 90 315 
 
@@ -49,5 +51,10 @@
 :vis tumor(S) ON
 :vis Phantom(S) ON
 
-:place HPGe(S) 4 room r225 -1.25*cm -2.165*cm 0
-:place HPGe(S) 5 room r315 1.768*cm -1.768*cm 0
+:place HPGe(S) 400 room r90x 0 -5*cm 0 
+:place HPGe(S) 430 room r225 -2.50*cm -4.33*cm 0
+:place HPGe(S) 445 room r315 3.54*cm -3.54*cm 0
+:place HPGe(S) 460 room r225 -4.33*cm -2.50*cm 0
+:place HPGe(S) 490 room r90y 5*cm 0  0
+:place HPGe(S) 4901 room r90y -5*cm 0 0
+

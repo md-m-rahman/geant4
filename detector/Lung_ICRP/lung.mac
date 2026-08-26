@@ -1,5 +1,5 @@
 /control/verbose 1
-/process/em/verbose 1
+/process/em/verbose 2
 /process/had/verbose 1
 /geometry/source detector.tg
 
@@ -30,7 +30,7 @@
 
 /vis/disable
 /tracking/verbose 0
-/analysis/setFileName lung1_tissueTumor.root
+/analysis/setFileName lung_TissueTumor_6.root
 /run/verbose 2
 /run/printProgress 100
-/run/beamOn 50000
+/run/beamOn 100000

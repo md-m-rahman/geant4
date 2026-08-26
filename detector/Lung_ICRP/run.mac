@@ -30,5 +30,5 @@
 /vis/scene/add/trajectories 
 /vis/scene/endOfEventAction accumulate
 /vis/viewer/set/viewpointVector 0 0 0
-/run/beamOn 50000
+/run/beamOn 1000000
 /vis/viewer/refresh
