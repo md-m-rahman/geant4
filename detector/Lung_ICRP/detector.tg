@@ -1,15 +1,78 @@
 :volu world BOX 500*cm 500*cm 500*cm G4_Galactic
 :vis world OFF
-:volu room BOX 50*cm 50*cm 50*cm G4_Galactic
+
+:volu room BOX 25*cm 25*cm 15*cm G4_Galactic
 :vis room OFF
+
 :rotm r000 0 0 0
 :rotm r90x 90 0 180 0 90 90
+:rotm r15 90 15 180 0 90 105
 :rotm r90y 180 0 90 90 90 0
 :rotm r225 90 135 0 0 90 225
 :rotm r315 90 45 180 135 90 315 
 
-:volu HPGe(S) TUBE 0  1*cm .5*cm G4_Ge
-:color HPGe(S) 1 1 0
+
+
+
+
+:mixt_by_weight Soft_tissue 0.29 13
+ H  0.101278
+ C  0.102310
+ N  0.028650
+ O  0.757072
+ Na 0.001840
+ Mg 0.000730
+ P  0.000800
+ S  0.002250
+ Cl 0.002660
+ K  0.001940
+ Ca 0.000090
+ Fe 0.000370
+ Zn 0.000010
+
+:mixt_by_weight Tumor 1.05 13
+ H  0.101278
+ C  0.102310
+ N  0.028650
+ O  0.757072
+ Na 0.001840
+ Mg 0.000730
+ P  0.000800
+ S  0.002250
+ Cl 0.002660
+ K  0.001940
+ Ca 0.000090
+ Fe 0.000370
+ Zn 0.000010
+
+:volu Phantom(S) BOX 10*cm 5*cm 15*cm G4_AIR
+:color Phantom(S)   0.4 0.4 0.4 0.1
+
+:volu LeftLung(S)  ELLIPSOID 4.5*cm 4.0*cm 14.0*cm -8.5*cm 13.5*cm Soft_tissue
+:color LeftLung(S)  0.5 0.7 0.8 0.20
+
+:volu RightLung(S) ELLIPSOID 4.5*cm 4.5*cm 14.0*cm -8.5*cm 13.3*cm Soft_tissue
+:color RightLung(S) 0.5 0.7 0.8 0.20
+:volu tumor(S) SPHERE 0 0.1*cm 0 360 0 180 Tumor
+:color tumor(S) 1 0 0 1
+
+:solid GeMain TUBE 0 12.45*mm 4.10*mm
+:solid BottomHole TUBE 0 6.15*mm 1.11*mm
+:solid GeMinusBottom SUBTRACTION GeMain BottomHole r000 0 0 -3.01*mm
+:solid TopGroove TUBE 3.45*mm 7.45*mm 0.76*mm
+:solid AK01_Ge SUBTRACTION GeMinusBottom TopGroove r000 0 0 3.36*mm
+:volu GeCrystal(S) AK01_Ge G4_Ge
+:color GeCrystal(S) 1 1 0
 
 :place room 1 world r000 0 0 0
-:place HPGe(S) 400 room r90x 0 -5*cm 0 
+:place Phantom(S) 2 room r000 0 0 0
+:vis Phantom(S) ON
+:place LeftLung(S)  4 Phantom(S) r000 -5.0*cm 0 -2.5*cm
+:vis LeftLung(S) ON
+:place RightLung(S) 5 Phantom(S) r000  4.0*cm 0 -2.5*cm
+:vis RightLung(S) ON
+:place tumor(S) 3 RightLung(S) r000 -4.0*cm 0 2.5*cm 
+:vis tumor(S) ON
+
+:place GeCrystal(S) 460 room r225 -12.99*cm -7.50*cm 0
+:vis GeCrystal(S) ON
