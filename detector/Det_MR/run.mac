@@ -11,7 +11,7 @@
 /vis/scene/add/axes 0 0 0 20 cm
 /vis/viewer/set/style surface
 #/vis/viewer/set/viewpointThetaPhi 0 0 deg
-/vis/viewer/set/viewpointVector 0 0  0
+/vis/viewer/set/viewpointVector 1 1 1 
 #/vis/viewer/set/upVector 0 1 0
 /vis/viewer/zoom 1
 /vis/viewer/refresh
@@ -21,13 +21,15 @@
 /gps/source/add 1
 /gps/particle gamma
 /gps/energy 662 keV
-/gps/position 0 10 0 cm
+/gps/position 0 15 0 cm
 /gps/direction 0 -1 0 
 
 
 /vis/scene/add/trajectories 
-/vis/scene/endOfEventAction accumulate
-/run/beamOn 20
+/vis/scene/endOfEventAction accumulate 1000
+/run/beamOn 1000
 /vis/viewer/refresh
+
+
 
 
