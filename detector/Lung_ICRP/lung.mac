@@ -33,7 +33,7 @@
 
 /vis/disable
 /tracking/verbose 0
-/analysis/setFileName Lung_TissueTumor_AK01_460_deg.root
+/analysis/setFileName Lung_TissueTumor_AK02_445.root
 /run/verbose 1
 /run/printProgress 100
 /run/beamOn 1000000

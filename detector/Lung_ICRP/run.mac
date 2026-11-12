@@ -8,7 +8,7 @@
 /vis/open 
 /vis/drawVolume
 
-/vis/scene/add/axes 0 0 0 50 cm
+#/vis/scene/add/axes 0 0 0 50 cm
 /vis/viewer/set/style surface
 
 /vis/geometry/set/forceWireframe Phantom(S) 0 true

@@ -33,7 +33,7 @@
 
 /vis/disable
 /tracking/verbose 0
-/analysis/setFileName AK01_400_deg.root
+/analysis/setFileName AK02_400.LIV.root
 /run/verbose 1
 /run/printProgress 100
 /run/beamOn 1000000
