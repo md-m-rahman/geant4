@@ -1,20 +1,49 @@
 :volu world BOX 500*cm 500*cm 500*cm G4_Galactic
 :vis world OFF
 
-:volu room BOX 25*cm 25*cm 15*cm G4_Galactic
+:volu room BOX 40*cm 40*cm 40*cm G4_Galactic
 :vis room OFF
 
 :rotm r000 0 0 0
-:rotm r00 90 0 0
-:rotm r10 90 10 0
-:rotm r20 90 20 0
-:rotm r30 90 30 0
-:rotm r40 90 40 0
-:rotm r50 90 50 0
-:rotm r60 90 60 0
-:rotm r70 90 70 0
-:rotm r80 90 80 0
-:rotm r90 90 90 0
+:rotm rLung 90 0 0
+:rotm r09 90 90 0
+:rotm r00  90 0 0
+:rotm r10  90 10 0
+:rotm r20  90 20 0
+:rotm r30  90 30 0
+:rotm r40  90 40 0
+:rotm r50  90 50 0
+:rotm r60  90 60 0
+:rotm r70  90 70 0
+:rotm r80  90 80 0
+:rotm r90  90 90 0
+:rotm r100 90 100 0
+:rotm r110 90 110 0
+:rotm r120 90 120 0
+:rotm r130 90 130 0
+:rotm r140 90 140 0
+:rotm r150 90 150 0
+:rotm r160 90 160 0
+:rotm r170 90 170 0
+:rotm r180 90 180 0
+:rotm r190 90 190 0 
+:rotm r200 90 200 0
+:rotm r210 90 210 0
+:rotm r220 90 220 0
+:rotm r230 90 230 0
+:rotm r240 90 240 0
+:rotm r250 90 250 0
+:rotm r260 90 260 0
+:rotm r270 90 270 0
+:rotm r280 90 280 0
+:rotm r290 90 290 0
+:rotm r300 90 300 0
+:rotm r310 90 310 0
+:rotm r320 90 320 0
+:rotm r330 90 330 0
+:rotm r340 90 340 0
+:rotm r350 90 350 0
+
 :mixt_by_weight Soft_tissue 0.29 13
  H  0.101278
  C  0.102310
@@ -45,40 +74,72 @@
  Fe 0.000370
  Zn 0.000010
 
-:volu Phantom(S) BOX 10*cm 5*cm 15*cm G4_AIR
-:color Phantom(S)   0.4 0.4 0.4 0.1
+:volu Phantom(S) BOX 10*cm 15*cm 5*cm G4_AIR
+:color Phantom(S) 0.4 0.4 0.4 0.1 
 
-:volu LeftLung(S)  ELLIPSOID 4.5*cm 4.0*cm 14.0*cm -8.5*cm 13.5*cm Soft_tissue
-:color LeftLung(S)  0.5 0.7 0.8 0.20
+:volu LeftLung(S) ELLIPSOID 4.5*cm 4.0*cm 14.0*cm -8.5*cm 13.5*cm Soft_tissue
+:color LeftLung(S) 0.5 0.7 0.8 0.20
 
 :volu RightLung(S) ELLIPSOID 4.5*cm 4.5*cm 14.0*cm -8.5*cm 13.3*cm Soft_tissue
 :color RightLung(S) 0.5 0.7 0.8 0.20
+
 :volu tumor(S) SPHERE 0 0.1*cm 0 360 0 180 Tumor
 :color tumor(S) 1 0 0 1
 
-
 :solid GeMain TUBE 0 12.65*mm 4.70*mm
-
 :solid BottomHole TUBE 0 7.80*mm 1.05*mm
 :solid GeMinusBottom SUBTRACTION GeMain BottomHole r000 0 0 -3.65*mm
-
 :solid TopGroove TUBE 3.45*mm 8.35*mm 0.75*mm
 :solid AK02_Ge SUBTRACTION GeMinusBottom TopGroove r000 0 0 3.95*mm
 
 :volu GeCrystal(S) AK02_Ge G4_Ge
 :color GeCrystal(S) .5 .5 .7 1
 
-
 :place room 1 world r000 0 0 0
 :place Phantom(S) 2 room r000 0 0 0
 :vis Phantom(S) ON
 
-:place LeftLung(S)  4 Phantom(S) r000 -5.0*cm 0 -2.5*cm
+:place LeftLung(S) 4 Phantom(S) rLung -5.0*cm 0 0
 :vis LeftLung(S) ON
-:place RightLung(S) 5 Phantom(S) r000  4.0*cm 0 -2.5*cm
+:place RightLung(S) 5 Phantom(S) rLung 4.0*cm 0 0
 :vis RightLung(S) ON
-:place tumor(S) 3 RightLung(S) r000 -4.0*cm 0 2.5*cm 
+:place tumor(S) 3 RightLung(S) r000 -4.0*cm 0 2.5*cm
 :vis tumor(S) ON
 
-:place GeCrystal(S) 490 room r90 15.000000*cm   0.000000*cm 0
+:place GeCrystal(S) 400 room r00 0.000000*cm -15.000000*cm -19.50000*cm
+:place GeCrystal(S) 410 room r10 2.604723*cm -14.772116*cm -19.50000*cm
+:place GeCrystal(S) 420 room r20 5.130302*cm -14.095389*cm -19.50000*cm
+:place GeCrystal(S) 430 room r30 7.500000*cm -12.990381*cm -19.50000*cm
+:place GeCrystal(S) 440 room r40 9.641814*cm -11.490667*cm -19.50000*cm
+:place GeCrystal(S) 450 room r50 11.490667*cm -9.641814*cm -19.50000*cm
+:place GeCrystal(S) 460 room r60 12.990381*cm -7.500000*cm -19.50000*cm
+:place GeCrystal(S) 470 room r70 14.095389*cm -5.130302*cm -19.50000*cm
+:place GeCrystal(S) 480 room r80 14.772116*cm -2.604723*cm -19.50000*cm
+:place GeCrystal(S) 490 room r90 15.000000*cm 0.000000*cm -19.50000*cm
+:place GeCrystal(S) 500 room r100 14.772116*cm 2.604723*cm -19.500000*cm
+:place GeCrystal(S) 510 room r110 14.095389*cm 5.130302*cm -19.500000*cm
+:place GeCrystal(S) 520 room r120 12.990381*cm 7.500000*cm -19.500000*cm
+:place GeCrystal(S) 530 room r130 11.490667*cm 9.641814*cm -19.500000*cm
+:place GeCrystal(S) 540 room r140 9.641814*cm 11.490667*cm -19.500000*cm
+:place GeCrystal(S) 550 room r150 7.500000*cm 12.990381*cm -19.500000*cm
+:place GeCrystal(S) 560 room r160 5.130302*cm 14.095389*cm -19.500000*cm
+:place GeCrystal(S) 570 room r170 2.604723*cm 14.772116*cm -19.500000*cm
+:place GeCrystal(S) 580 room r180 0.000000*cm 15.000000*cm -19.500000*cm
+:place GeCrystal(S) 590 room r190 -2.604723*cm 14.772116*cm -19.500000*cm
+:place GeCrystal(S) 600 room r200 -5.130302*cm 14.095389*cm -19.500000*cm
+:place GeCrystal(S) 610 room r210 -7.500000*cm 12.990381*cm -19.500000*cm
+:place GeCrystal(S) 620 room r220 -9.641814*cm 11.490667*cm -19.500000*cm
+:place GeCrystal(S) 630 room r230 -11.490667*cm 9.641814*cm -19.500000*cm
+:place GeCrystal(S) 640 room r240 -12.990381*cm 7.500000*cm -19.500000*cm
+:place GeCrystal(S) 650 room r250 -14.095389*cm 5.130302*cm -19.500000*cm
+:place GeCrystal(S) 660 room r260 -14.772116*cm 2.604723*cm -19.500000*cm
+:place GeCrystal(S) 670 room r270 -15.000000*cm 0.000000*cm -19.500000*cm
+:place GeCrystal(S) 680 room r280 -14.772116*cm -2.604723*cm -19.500000*cm
+:place GeCrystal(S) 690 room r290 -14.095389*cm -5.130302*cm -19.500000*cm
+:place GeCrystal(S) 700 room r300 -12.990381*cm -7.500000*cm -19.500000*cm
+:place GeCrystal(S) 710 room r310 -11.490667*cm -9.641814*cm -19.500000*cm
+:place GeCrystal(S) 720 room r320 -9.641814*cm -11.490667*cm -19.500000*cm
+:place GeCrystal(S) 730 room r330 -7.500000*cm -12.990381*cm -19.500000*cm
+:place GeCrystal(S) 740 room r340 -5.130302*cm -14.095389*cm -19.500000*cm
+:place GeCrystal(S) 750 room r350 -2.604723*cm -14.772116*cm -19.500000*cm
 :vis GeCrystal(S) ON
